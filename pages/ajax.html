@@ -1,0 +1,19 @@
+<html>
+<head>
+<script src="jquery-dev.js"></script>
+<script>
+$(function()  {
+
+  $.getJSON("/testget", function(data) {
+     console.log("arrived here");
+     if (data.a === 2) {
+        document.body.textContent = "success";
+     }
+  });
+
+});
+
+</script>
+</head>
+<body></body>
+</html>

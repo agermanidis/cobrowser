@@ -1,0 +1,21 @@
+**Benchmark setup**
+
+.. code-block:: python
+
+    from pandas_vb_common import *
+    
+    tm.N = 1000
+    ts = tm.makeTimeSeries()
+    dt = ts.index[500]
+    
+
+**Benchmark statement**
+
+.. code-block:: python
+
+    ts[dt]
+
+**Performance graph**
+
+.. image:: vbench/figures/series_getitem_scalar.png
+   :width: 6in

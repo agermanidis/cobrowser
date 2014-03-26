@@ -1,0 +1,29 @@
+**Benchmark setup**
+
+.. code-block:: python
+
+    from pandas_vb_common import *
+    
+    try:
+        klass = DataMatrix
+    except:
+        klass = DataFrame
+    
+    index = [tm.rands(10) for _ in xrange(1000)]
+    columns = [tm.rands(10) for _ in xrange(30)]
+    df = klass(np.random.rand(1000, 30), index=index,
+                   columns=columns)
+    idx = index[100]
+    col = columns[10]
+    
+
+**Benchmark statement**
+
+.. code-block:: python
+
+    df.get_value(idx, col)
+
+**Performance graph**
+
+.. image:: vbench/figures/dataframe_get_value.png
+   :width: 6in

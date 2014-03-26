@@ -1,0 +1,28 @@
+<html>
+
+<head>
+<script>
+window.onload = function() {
+console.log("FROM INSIDE");
+
+box = document.getElementById("box");
+
+randomize = function() {
+ box.width = Math.floor(Math.random() * 600);
+ setTimeout(randomize, 1000);
+};
+
+randomize();
+};
+
+</script>
+
+</head>
+
+<body>
+
+<img id="box" src="http://www.isotimia.gr/files/ArticlePhotos/technology/apple.jpg"  width="200"></img>
+
+</body>
+
+</html>

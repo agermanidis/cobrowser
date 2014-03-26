@@ -1,0 +1,44 @@
+#addressBar {
+    height: 50px; 
+    width: 500px; 
+    font-size: 18px;
+}
+
+#tab-container {
+    width: 100%;
+    height: 90%;
+    position: absolute;
+    border: 0px solid black;
+}
+
+
+li {
+    display: inline;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+li.selected {
+    border-top: 1px solid blue;
+}
+
+#browser {
+    margin:20px;
+    position: absolute;
+    top: 10%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.tab {
+    position: absolute;
+    display: none;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}

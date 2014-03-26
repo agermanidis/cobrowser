@@ -1,0 +1,16 @@
+<html>
+<body>
+<canvas id="canvas" width="640" height="480"></canvas>
+<script>
+canvasElement = document.getElementById("canvas");
+context = canvasElement.getContext("2d");
+
+canvasElement.addEventListener("mousemove", function(evt) {
+    if (evt.which == 1) {
+        context.fillRect(evt.offsetX, evt.offsetY, 5,5);
+    }
+});
+</script>
+</body>
+
+</html>

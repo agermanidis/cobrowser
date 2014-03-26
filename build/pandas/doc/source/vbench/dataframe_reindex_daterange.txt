@@ -1,0 +1,23 @@
+**Benchmark setup**
+
+.. code-block:: python
+
+    from pandas_vb_common import *
+    
+    rng = DateRange('1/1/1970', periods=10000, offset=datetools.Minute())
+    df = DataFrame(np.random.rand(10000, 10), index=rng,
+                   columns=range(10))
+    df['foo'] = 'bar'
+    rng2 = Index(rng[::2])
+    
+
+**Benchmark statement**
+
+.. code-block:: python
+
+    df.reindex(rng2)
+
+**Performance graph**
+
+.. image:: vbench/figures/dataframe_reindex_daterange.png
+   :width: 6in

@@ -1,0 +1,26 @@
+**Benchmark setup**
+
+.. code-block:: python
+
+    from pandas_vb_common import *
+    
+    N = 10000
+    K = 10
+    
+    key1 = np.array([rands(10) for _ in xrange(N)], dtype='O').repeat(K)
+    key2 = np.array([rands(10) for _ in xrange(N)], dtype='O').repeat(K)
+    
+    df = DataFrame({'key1' : key1, 'key2' : key2,
+                    'value' : np.random.randn(N * K)})
+    
+
+**Benchmark statement**
+
+.. code-block:: python
+
+    df.sort_index(by=['key1', 'key2'])
+
+**Performance graph**
+
+.. image:: vbench/figures/frame_sort_index_by_columns.png
+   :width: 6in

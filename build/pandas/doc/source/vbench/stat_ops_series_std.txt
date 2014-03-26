@@ -1,0 +1,20 @@
+**Benchmark setup**
+
+.. code-block:: python
+
+    from pandas_vb_common import *
+    
+    s = Series(np.random.randn(100000))
+    s[::2] = np.nan
+    
+
+**Benchmark statement**
+
+.. code-block:: python
+
+    s.std()
+
+**Performance graph**
+
+.. image:: vbench/figures/stat_ops_series_std.png
+   :width: 6in

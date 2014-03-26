@@ -1,0 +1,24 @@
+!!! 5
+html(lang="en", dir="ltr")
+  head
+    link(rel="stylesheet", href="/client.css", type="text/css")
+    script
+      var tabStore = !{tabs};
+    script(src='/js/socket.io.min.js')
+    script(src='/js/jquery-1.7.1.min.js')
+    script(src='/js/client.js')
+  body
+    p#tab-id
+    button#back(disabled="true") Back
+    button#forward(disabled="true") Forward
+    button#reload Reload
+    input#addressBar(placeholder = "Enter address") 
+    button#create-tab Create Tab
+    button#destroy-tab Destroy Tab
+    button#open-tab Open Tab
+    p#status
+    #browser
+      ul#tab-navigator
+      #tab-container
+//    iframe#page(src= "/page", style = "position: fixed; top: 150px; left: 0; right: 100px; bottom: 0; width: 100%; height: 80%;")
+

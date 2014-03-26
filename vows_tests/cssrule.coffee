@@ -1,0 +1,3 @@
+{CSSRule} = require '../cssom/styledeclaration'
+
+

@@ -1,0 +1,25 @@
+**Benchmark setup**
+
+.. code-block:: python
+
+    from pandas_vb_common import *
+    
+    # create 100 dataframes with the same index
+    dr = np.asarray(DateRange(datetime(1990,1,1), datetime(2012,1,1)))
+    data_frames = {}
+    for x in xrange(100):
+       df = DataFrame({"a": [0]*len(dr), "b": [1]*len(dr),
+                       "c": [2]*len(dr)}, index=dr)
+       data_frames[x] = df
+    
+
+**Benchmark statement**
+
+.. code-block:: python
+
+    Panel.from_dict(data_frames)
+
+**Performance graph**
+
+.. image:: vbench/figures/panel_from_dict_same_index.png
+   :width: 6in

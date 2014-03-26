@@ -1,0 +1,16 @@
+<html>
+<head>
+</head>
+<body>
+<p id="counter">0</p>
+<script>
+var a = 2;
+var count = 0;
+var counter = document.getElementById('counter'); 
+var inc = function() { count++; counter.textContent = count; setTimeout(inc, 1000); };
+setTimeout(inc, 1000); 
+counter.addEventListener('click', function() { count = 0; counter.textContent
+= count; });
+</script>
+</body>
+</html>

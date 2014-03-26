@@ -1,0 +1,18 @@
+<html>
+<head>
+<script src="http://code.jquery.com/jquery-1.5.min.js"></script>
+<script>
+$(function() {
+$("#animate-button").click(function() {
+    $("#box").animate({left: 100}, function() {
+        $("#box").animate({left: 0});
+    });
+});
+});
+</script>
+</head>
+<body>
+<div id="box" style="position: absolute; background-color: blue; width: 100px; height: 100px; margin:20px;"></div>
+<button id="animate-button">Animate</button>
+</body>
+</html>

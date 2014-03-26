@@ -1,0 +1,25 @@
+**Benchmark setup**
+
+.. code-block:: python
+
+    from pandas_vb_common import *
+    
+    df = DataFrame(np.random.randn(10000, 8), columns=list('abcdefgh'))
+    df['foo'] = 'bar'
+    
+    row_labels = list(df.index[::10])[:900]
+    col_labels = list(df.columns) * 100
+    row_labels_all = list(df.index) * len(df.columns)
+    col_labels_all = list(df.columns) * len(df.index)
+    
+
+**Benchmark statement**
+
+.. code-block:: python
+
+    df.lookup(row_labels, col_labels)
+
+**Performance graph**
+
+.. image:: vbench/figures/frame_fancy_lookup.png
+   :width: 6in

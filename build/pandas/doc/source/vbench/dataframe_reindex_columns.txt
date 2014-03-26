@@ -1,0 +1,20 @@
+**Benchmark setup**
+
+.. code-block:: python
+
+    from pandas_vb_common import *
+    
+    df = DataFrame(index=range(10000), data=np.random.rand(10000,30),
+                   columns=range(30))
+    
+
+**Benchmark statement**
+
+.. code-block:: python
+
+    df.reindex(columns=df.columns[1:5])
+
+**Performance graph**
+
+.. image:: vbench/figures/dataframe_reindex_columns.png
+   :width: 6in

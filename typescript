@@ -1,0 +1,110 @@
+Script started on Tue Jan  8 23:12:51 2013
+[1m[7m%[27m[1m[0m                                                                                [0m[27m[24m[Jiphone% [Kl
+zsh: command not found: l
+[1m[7m%[27m[1m[0m                                                                                [0m[27m[24m[Jiphone% [Klls
+address_bar.coffee		launch_test.coffee
+application_cache.coffee	lock.coffee
+browser.coffee			node_modules
+browser_shell.coffee		page_shell.coffee
+context.coffee			pages
+cookie.coffee			pageserver.coffee
+cssom				public
+data_transfer.coffee		queue.coffee
+dom				resource_manager.coffee
+domtoobject.coffee		script
+editing				server.coffee
+encoding.coffee			test
+evented_array.coffee		test.coffee
+graveyard.coffee		test_helpers.coffee
+helpers.coffee			test_server.coffee
+history.coffee			typescript
+html				views
+index.coffee			vows_tests
+interfaces			websocket.coffee
+launch.coffee
+[1m[7m%[27m[1m[0m                                                                                [0m[27m[24m[Jiphone% [Ksscript/
+[Jcopy_jsdom.sh*                   sync_tests.sh*
+create_page_with_javascript.sh*  watch*
+push-pages.sh*                   [3A[0m[27m[24m[8Cscript/[K
+[J[1m[7m%[27m[1m[0m                                                                                [0m[27m[24m[Jiphone% [Kssc
+[1m[7m%[27m[1m[0m                                                                                [0m[27m[24m[Jiphone% [Kccat script/c
+[Jcopy_jsdom.sh*                   create_page_with_javascript.sh*[A[0m[27m[24m[8Ccat script/c[Kreate_page_with_javascript.sh[1m [0m[0m 
+[J#!/bin/bash
+
+echo "<html><body><script src='$1.js'></script></body></html>" > pages/$1.html
+cat > pages/$1.js
+[1m[7m%[27m[1m[0m                                                                                [0m[27m[24m[Jiphone% [Kccat pages/gogle   ogle_service.
+[Jgoogle_service.html  google_service.js[A[0m[27m[24m[8Ccat pages/google_service.[K[25D
+[J[A[8C                         [25Dcat script/create_page_with_javascript.sh[41Dls                                       [39D
+[J[1m[7m%[27m[1m[0m                                                                                [0m[27m[24m[Jiphone% [K
+[1m[7m%[27m[1m[0m                                                                                [0m[27m[24m[Jiphone% [Kccd ~ c  lls
+address_bar.coffee		launch_test.coffee
+application_cache.coffee	lock.coffee
+browser.coffee			node_modules
+browser_shell.coffee		page_shell.coffee
+context.coffee			pages
+cookie.coffee			pageserver.coffee
+cssom				public
+data_transfer.coffee		queue.coffee
+dom				resource_manager.coffee
+domtoobject.coffee		script
+editing				server.coffee
+encoding.coffee			test
+evented_array.coffee		test.coffee
+graveyard.coffee		test_helpers.coffee
+helpers.coffee			test_server.coffee
+history.coffee			typescript
+html				views
+index.coffee			vows_tests
+interfaces			websocket.coffee
+launch.coffee
+[1m[7m%[27m[1m[0m                                                                                [0m[27m[24m[Jiphone% [Ksscript/watch[1m [0m[0m 
+File not found: coffee/*.coffee
+path.exists is now called `fs.exists`.
+12:10:52 - compiled public/cs/page.coffee
+12:10:52 - compiled public/cs/#serialize_event.coffee#
+12:10:52 - compiled public/cs/serialize_event.coffee
+12:10:52 - compiled public/cs/client.coffee
+12:10:52 - compiled public/cs/serialize.coffee
+12:44:41 - compiled public/cs/page.coffee
+12:44:50 - compiled public/cs/page.coffee
+12:44:57 - compiled public/cs/page.coffee
+In public/cs/page.coffee, Parse error on line 165: Unexpected 'POST_IF'
+12:45:09 - compiled public/cs/page.coffee
+12:45:10 - compiled public/cs/page.coffee
+12:58:37 - compiled public/cs/page.coffee
+13:41:44 - compiled public/cs/page.coffee
+13:41:48 - compiled public/cs/page.coffee
+13:41:58 - compiled public/cs/page.coffee
+13:42:02 - compiled public/cs/page.coffee
+13:42:07 - compiled public/cs/page.coffee
+13:42:19 - compiled public/cs/page.coffee
+13:42:26 - compiled public/cs/page.coffee
+13:42:30 - compiled public/cs/page.coffee
+13:42:36 - compiled public/cs/page.coffee
+13:44:11 - compiled public/cs/page.coffee
+13:44:19 - compiled public/cs/page.coffee
+13:44:31 - compiled public/cs/page.coffee
+13:44:58 - compiled public/cs/page.coffee
+13:45:00 - compiled public/cs/page.coffee
+13:45:50 - compiled public/cs/page.coffee
+13:46:38 - compiled public/cs/page.coffee
+13:46:42 - compiled public/cs/page.coffee
+14:48:11 - compiled public/cs/page.coffee
+19:22:21 - compiled public/cs/page.coffee
+19:59:49 - compiled public/cs/page.coffee
+20:01:50 - compiled public/cs/page.coffee
+20:02:25 - compiled public/cs/page.coffee
+20:02:50 - compiled public/cs/page.coffee
+20:02:59 - compiled public/cs/page.coffee
+20:11:54 - compiled public/cs/page.coffee
+20:12:52 - compiled public/cs/page.coffee
+20:13:17 - compiled public/cs/page.coffee
+20:45:45 - compiled public/cs/page.coffee
+20:46:28 - compiled public/cs/page.coffee
+20:47:14 - compiled public/cs/page.coffee
+20:47:45 - compiled public/cs/page.coffee
+20:48:25 - compiled public/cs/page.coffee
+20:50:37 - compiled public/cs/page.coffee
+20:51:02 - compiled public/cs/serialize.coffee
+21:28:58 - compiled public/cs/page.coffee

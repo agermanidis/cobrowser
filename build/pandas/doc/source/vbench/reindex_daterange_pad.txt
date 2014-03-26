@@ -1,0 +1,34 @@
+**Benchmark setup**
+
+.. code-block:: python
+
+    from pandas_vb_common import *
+    
+    rng = DateRange('1/1/2000', periods=10000, offset=datetools.Minute())
+    
+    ts = Series(np.random.randn(len(rng)), index=rng)
+    ts2 = ts[::2]
+    ts3 = ts2.reindex(ts.index)
+    
+    def pad():
+        try:
+            ts2.reindex(ts.index, method='pad')
+        except:
+            ts2.reindex(ts.index, fillMethod='pad')
+    def backfill():
+        try:
+            ts2.reindex(ts.index, method='backfill')
+        except:
+            ts2.reindex(ts.index, fillMethod='backfill')
+    
+
+**Benchmark statement**
+
+.. code-block:: python
+
+    pad()
+
+**Performance graph**
+
+.. image:: vbench/figures/reindex_daterange_pad.png
+   :width: 6in

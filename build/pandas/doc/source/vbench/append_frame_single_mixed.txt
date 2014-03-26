@@ -1,0 +1,31 @@
+**Benchmark setup**
+
+.. code-block:: python
+
+    from pandas_vb_common import *
+    
+    df1 = DataFrame(np.random.randn(10000, 4), columns=['A', 'B', 'C', 'D'])
+    df2 = df1.copy()
+    df2.index = np.arange(10000, 20000)
+    mdf1 = df1.copy()
+    mdf1['obj1'] = 'bar'
+    mdf1['obj2'] = 'bar'
+    mdf1['int1'] = 5
+    try:
+        mdf1.consolidate(inplace=True)
+    except:
+        pass
+    mdf2 = mdf1.copy()
+    mdf2.index = df2.index
+    
+
+**Benchmark statement**
+
+.. code-block:: python
+
+    mdf1.append(mdf2)
+
+**Performance graph**
+
+.. image:: vbench/figures/append_frame_single_mixed.png
+   :width: 6in

@@ -1,0 +1,39 @@
+<html>
+<head>
+<script>
+var ws = new WebSocket("ws://localhost:1859/");
+
+ws.onopen = function() {
+  var opened = document.getElementById("opened");
+  opened.textContent = "true";
+  var readyState = document.getElementById("readyState");
+  readyState.textContent = ws.readyState;
+  ws.send("message");
+};
+
+ws.onmessage = function(evt) {
+  var msg = document.createElement("p");
+  var messages = document.getElementById("messages");
+  msg.textContent = evt.data;
+  messages.appendChild(msg);
+  //ws.send("message");
+};
+
+ws.onclose = function() {
+  var opened = document.getElementById("opened");
+  opened.textContent = "false";
+  var readyState = document.getElementById("readyState");
+  readyState.textContent = ws.readyState;
+};
+</script>
+</head>
+<body>
+ReadyState: <p id="readyState">0</p>
+Opened: <p id="opened">false</p>
+Messages:
+<div id="messages">
+
+</div>
+</body>
+</html>
+

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+coffee -lwcb -o browser_js/ coffee/* & 
+coffee -lwcb -o public/js/ public/cs/* 

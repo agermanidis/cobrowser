@@ -1,0 +1,19 @@
+**Benchmark setup**
+
+.. code-block:: python
+
+    from pandas_vb_common import *
+    
+    data = dict((i,dict((j,float(j)) for j in xrange(100))) for i in xrange(2000))
+    
+
+**Benchmark statement**
+
+.. code-block:: python
+
+    DataFrame(data)
+
+**Performance graph**
+
+.. image:: vbench/figures/frame_ctor_nested_dict_int64.png
+   :width: 6in

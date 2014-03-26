@@ -1,0 +1,21 @@
+**Benchmark setup**
+
+.. code-block:: python
+
+    from pandas_vb_common import *
+    
+    rng = DateRange('1/1/2000', periods=10000, offset=datetools.Minute())
+    rng = rng.view(Index)
+    rng2 = rng[:-1]
+    
+
+**Benchmark statement**
+
+.. code-block:: python
+
+    rng.intersection(rng2)
+
+**Performance graph**
+
+.. image:: vbench/figures/index_datetime_intersection.png
+   :width: 6in

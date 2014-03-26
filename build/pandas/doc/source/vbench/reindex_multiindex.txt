@@ -1,0 +1,28 @@
+**Benchmark setup**
+
+.. code-block:: python
+
+    from pandas_vb_common import *
+    
+    N = 1000
+    K = 20
+    
+    level1 = np.array([tm.rands(10) for _ in xrange(N)], dtype='O').repeat(K)
+    level2 = np.tile(np.array([tm.rands(10) for _ in xrange(K)], dtype='O'),
+                     N)
+    index = MultiIndex.from_arrays([level1, level2])
+    
+    s1 = Series(np.random.randn(N * K), index=index)
+    s2 = s1[::2]
+    
+
+**Benchmark statement**
+
+.. code-block:: python
+
+    s1.reindex(s2.index)
+
+**Performance graph**
+
+.. image:: vbench/figures/reindex_multiindex.png
+   :width: 6in

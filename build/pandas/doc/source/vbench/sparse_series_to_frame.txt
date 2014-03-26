@@ -1,0 +1,33 @@
+**Benchmark setup**
+
+.. code-block:: python
+
+    from pandas_vb_common import *
+    
+    from pandas.core.sparse import SparseSeries, SparseDataFrame
+    
+    K = 50
+    N = 50000
+    rng = np.asarray(DateRange('1/1/2000', periods=N,
+                               offset=datetools.Minute()))
+    
+    # rng2 = np.asarray(rng).astype('M8').astype('i8')
+    
+    series = {}
+    for i in range(1, K + 1):
+        data = np.random.randn(N)[:-i]
+        this_rng = rng[:-i]
+        data[100:] = np.nan
+        series[i] = SparseSeries(data, index=this_rng)
+    
+
+**Benchmark statement**
+
+.. code-block:: python
+
+    SparseDataFrame(series)
+
+**Performance graph**
+
+.. image:: vbench/figures/sparse_series_to_frame.png
+   :width: 6in

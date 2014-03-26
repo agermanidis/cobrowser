@@ -1,0 +1,24 @@
+**Benchmark setup**
+
+.. code-block:: python
+
+    from pandas_vb_common import *
+    
+    index = [tm.rands(10) for _ in xrange(1000)]
+    columns = [tm.rands(10) for _ in xrange(30)]
+    df = DataFrame(np.random.rand(1000, 30), index=index,
+                   columns=columns)
+    idx = index[100]
+    col = columns[10]
+    
+
+**Benchmark statement**
+
+.. code-block:: python
+
+    df[col][idx]
+
+**Performance graph**
+
+.. image:: vbench/figures/dataframe_getitem_scalar.png
+   :width: 6in

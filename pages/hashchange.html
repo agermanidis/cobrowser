@@ -1,0 +1,24 @@
+<html>
+<head>
+<script>
+
+window.onload = function() {
+  
+  window.addEventListener('hashchange',  function() { 
+    var messages = document.getElementById("messages");
+    var msg = document.createElement("p");
+    msg.textContent = window.location.hash;
+    messages.appendChild(msg);
+  });
+
+
+};
+</script>
+
+</head>
+<body>
+<div id="messages">
+
+</div>
+</body>
+</html>

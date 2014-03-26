@@ -1,0 +1,6 @@
+- make scripts run in the right sequence
+++ that's the problem with wikipedia
+- make amazon work -- right now the problem is that the frame element is not inserted into the document fast enough 
+- make forbes work
+- offsetHeight problem in jquery 1.6
+++ problem is with setting innerHTML

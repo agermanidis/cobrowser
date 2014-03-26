@@ -1,0 +1,16 @@
+!!! 5
+html(lang="en", dir="ltr")
+  head
+    link(rel="stylesheet", href="/page.css", type="text/css")
+    meta(charset="utf-8")
+    script
+      var tabId = "#{tabId}";
+      var userId = "#{userId}";
+      var currentDocumentID = "#{documentId}";
+      var serializedDocument = !{serializedDocument};
+      var documentOptions = !{documentOptions};
+    script(src='/js/socket.io.min.js')
+    script(src='/js/jquery-1.7.1.min.js')
+    script(src='/js/uri.js')
+    script(src='/js/serialize.js')
+    script(src='/js/page.js')

@@ -1,0 +1,21 @@
+**Benchmark setup**
+
+.. code-block:: python
+
+    from pandas_vb_common import *
+    
+    df = DataFrame(np.random.randn(10000, 4), columns=['A', 'B', 'C', 'D'])
+    indexer = df['B'] > 0
+    obj_indexer = indexer.astype('O')
+    
+
+**Benchmark statement**
+
+.. code-block:: python
+
+    df[obj_indexer]
+
+**Performance graph**
+
+.. image:: vbench/figures/indexing_dataframe_boolean_rows_object.png
+   :width: 6in
